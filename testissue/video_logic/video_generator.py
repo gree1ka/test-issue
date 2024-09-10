@@ -19,7 +19,7 @@ def generate_scrolling_text(text, font_path=None, font_size=20, width=100, heigh
     #         if not os.path.exists(font_path):
     #             font_path = "/Library/Fonts/Times New Roman.ttf"
     font_path = os.path.dirname(__file__)
-    font_path = os.path.join(font_path, 'fonts', 'times.ttf')
+    font_path = os.path.join(font_path, 'fonts', 'TIMES.TTF')
 
     font = ImageFont.truetype(font_path, font_size)
 

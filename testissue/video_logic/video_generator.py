@@ -11,13 +11,15 @@ def generate_scrolling_text(text, font_path=None, font_size=20, width=100, heigh
     fps = 24  # Частота кадров
     
     # Загрузка шрифта 
-    if not font_path:
-        if os.name == 'nt':  # Windows
-            font_path = "C:\\Windows\\Fonts\\times.ttf"  # Путь для Windows
-        else:  # Linux или macOS
-            font_path = "/usr/share/fonts/truetype/msttcorefonts/times.ttf"
-            if not os.path.exists(font_path):
-                font_path = "/Library/Fonts/Times New Roman.ttf"
+    # if not font_path:
+    #     if os.name == 'nt':  # Windows
+    #         font_path = "C:\\Windows\\Fonts\\times.ttf"  # Путь для Windows
+    #     else:  # Linux или macOS
+    #         font_path = "/usr/share/fonts/truetype/msttcorefonts/times.ttf"
+    #         if not os.path.exists(font_path):
+    #             font_path = "/Library/Fonts/Times New Roman.ttf"
+    font_path = os.path.dirname(__file__)
+    font_path = os.path.join(font_path, 'fonts', 'times.ttf')
 
     font = ImageFont.truetype(font_path, font_size)
 
